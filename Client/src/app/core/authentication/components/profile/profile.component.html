@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Profile Data</h2>
+
+  <div *ngIf="profileData">
+    <p><strong>Name:</strong> {{ profileData.name }}</p>
+    <p><strong>Email:</strong> {{ profileData.email }}</p>
+    </div>
+    <button (click)="logout()" class="btn btn-primary mt-3">Logout</button>
+    <div *ngIf="!profileData">
+    <p>No User is currently logged in...</p>
+  </div>
+</div>

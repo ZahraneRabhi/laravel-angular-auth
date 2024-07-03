@@ -1,0 +1,37 @@
+# Ignore compiled output for Angular
+/Client/dist/
+/Client/tmp/
+/Client/out-tsc/
+/Client/.angular/
+
+# Ignore node_modules for both Angular and Laravel
+/Client/node_modules/
+/Server/node_modules/
+
+# Ignore Laravel specific files and directories
+/Server/vendor/
+/Server/node_modules
+/Server/.env
+/Server/.env.*
+/Server/composer.lock
+/Server/storage/*.log
+/Server/storage/*.gz
+/Server/storage/*.zip
+/Server/bootstrap/cache/
+/Server/Homestead.json
+/Server/Homestead.yaml
+/Server/Vagrantfile
+
+# Ignore IDE files
+/Client/.idea/
+/Client/*.iml
+/Client/*.ipr
+/Client/*.iws
+/Server/.idea/
+/Server/*.iml
+/Server/*.ipr
+/Server/*.iws
+
+# Ignore npm/yarn logs
+/Client/npm-debug.log
+/Client/yarn-error.log
