@@ -23,7 +23,14 @@ export class AuthService {
   }
 
   logout() {
-    localStorage.removeItem('access_token');
+    this.http.post(`${this.apiUrl}/logout`, {}, { withCredentials: true }).subscribe(
+      () => {
+        localStorage.removeItem('token'); 
+      },
+      error => {
+        console.error('Logout error', error);
+      }
+    );
   }
 
   isLoggedIn(): boolean {

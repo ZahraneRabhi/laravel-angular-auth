@@ -20,7 +20,12 @@ use App\Http\Controllers\ProfileController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Middleware protected routes, only accessible through a Token
 Route::middleware('auth:sanctum')->get('/profile', [ProfileController::class, 'show']);
+Route::middleware('auth:sanctum')->post('logout', [AuthController::class, 'logout']);
+
+// Unprotected routes, accessible to everyone
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 

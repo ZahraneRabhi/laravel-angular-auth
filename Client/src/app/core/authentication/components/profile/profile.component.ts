@@ -21,7 +21,7 @@ export class ProfileComponent {
   }
 
   logout() {
-    this.authService.logout(); 
+    //this.authService.logout(); 
     this.router.navigate(['/login']); 
   }
 
